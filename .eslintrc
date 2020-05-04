@@ -1,0 +1,20 @@
+{
+    "extends": [
+        "wesbos"
+    ],
+    "rules": {
+        "camelcase": [
+            "warn",
+            {
+                "properties": "never",
+                "ignoreDestructuring": true
+            }
+        ],
+        "no-plusplus": [
+            "error",
+            {
+                "allowForLoopAfterthoughts": true
+            }
+        ]
+    }
+}
