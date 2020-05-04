@@ -41,4 +41,4 @@ setopt PROMPT_SUBST
 # PROMPT="Line1${NEWLINE}LINE2"
 
 NEWLINE=$'\n'
-PROMPT="%B%F{magenta}%~%f%b \$vcs_info_msg_0_ ${NEWLINE}%B%F{magenta}%(!.#.▶︎)%f%b "
+PROMPT="%B%F{magenta}%~/%f%b \$vcs_info_msg_0_ ${NEWLINE}%B%F{magenta}%(!.#.▶︎)%f%b "
