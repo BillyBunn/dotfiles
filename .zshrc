@@ -18,7 +18,7 @@ alias ll='ls -al'
 alias -g badge='tput bel'
 
 # Alias for interacting with dotfiles bare git repo
-alias config='/usr/bin/git --git-dir=/Users/billybunn/.dotfiles/ --work-tree=/Users/billybunn'
+alias dotfiles='/usr/bin/git --git-dir=/Users/billybunn/.dotfiles/ --work-tree=/Users/billybunn'
 
 # case insensitive path-completion
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
