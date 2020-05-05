@@ -1,0 +1,48 @@
+{
+    "editor.cursorBlinking": "solid",
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 3,
+    "editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.minimap.showSlider": "always",
+    "editor.renderWhitespace": "selection",
+    "editor.rulers": [
+        80
+    ],
+    "editor.wordWrap": "on",
+    "workbench.colorTheme": "Night Owl",
+    "workbench.editor.tabSizing": "shrink",
+    "bracket-pair-colorizer-2.forceIterationColorCycle": true,
+    // When enabled, will trim trailing whitespace when saving a file.
+    "files.trimTrailingWhitespace": true,
+    // ----- Code format settings -----
+    // Format code on save
+    "editor.formatOnSave": true,
+    // Turn off formatOnSave for JS and JSX — done instead via eslint
+    "[javascript]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": false
+    },
+    // Tells the eslint plugin to run on save
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "eslint.alwaysShowStatus": true,
+    "eslint.enable": true,
+    // So 'option + shift + F' format is identical to save
+    "eslint.format.enable": true,
+    // Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
+    "prettier.disableLanguages": [
+        "javascript",
+        "javascriptreact"
+    ],
+    // Enable/disable default HTML formatter.
+    "html.format.enable": true,
+    // Controls whether existing line breaks before elements should be preserved. Only works before elements, not inside tags or for text.
+    "html.format.preserveNewLines": true,
+    "breadcrumbs.enabled": true,
+}
