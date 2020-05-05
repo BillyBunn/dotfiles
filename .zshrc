@@ -14,7 +14,7 @@ zstyle ':completion:*' list-suffixes
 zstyle ':completion:*' expand prefix suffix
 
 # Notes
-# macOS Terminal considers every new shell to be a login shell and an interactive shell. 
+# macOS Terminal considers every new shell to be a login shell and an interactive shell.
 # So, in Terminal a new zsh will potentially run all configuration files: .zshenv, .zprofile, .zshrc, .zlogin
 # For simplicity’s sake, I am just using one file: .zshrc
 
@@ -29,7 +29,7 @@ precmd_functions+=( precmd_vcs_info )
 # zstyle ':vcs_info:git:*' formats '%F{240}(%b) %r%f'
 zstyle ':vcs_info:git*' formats "%F{240}(%b) %m%u%c%f"
 zstyle ':vcs_info:*' enable git
-# Turns on command substitution in the prompt 
+# Turns on command substitution in the prompt
 setopt PROMPT_SUBST
 # Sets the prompt (with git branch name)
 # RPROMPT="\$vcs_info_msg_0_"
@@ -39,6 +39,21 @@ setopt PROMPT_SUBST
 # PROMPT='%B%F{magenta}%2~%f%b %# '
 # NEWLINE=$'\n'
 # PROMPT="Line1${NEWLINE}LINE2"
-
+# "terminal.ansiBrightCyan": "#7fdbca",
+# N_OW_CYAN=#7fdbca
 NEWLINE=$'\n'
-PROMPT="%B%F{magenta}%~/%f%b \$vcs_info_msg_0_ ${NEWLINE}%B%F{magenta}%(!.#.▶︎)%f%b "
+# PROMPT="%B%F{cyan}%~/%f%b \$vcs_info_msg_0_ ${NEWLINE}%B%F{cyan}%(!.#.▶︎)%f%b "
+# PROMPT="%B%~/%b \$vcs_info_msg_0_ ${NEWLINE}%B%(!.#.▶︎)%b "
+
+# fix Hyper first line precent sign
+# unsetopt PROMPT_SP
+
+# Uses the zsh precmd function hook to set the tab title to the current working directory before each prompt
+function precmd () {
+    window_title="\\033]0;${PWD##*/}\\007"
+    echo -ne "$window_title"
+}
+
+export STARSHIP_CONFIG=~/.starship
+# use starship prompt
+eval "$(starship init zsh)"
