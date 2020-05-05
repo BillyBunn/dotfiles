@@ -1,0 +1,42 @@
+[character]
+symbol = "▶︎"
+use_symbol_for_status = true
+error_symbol = "✕"
+style_success = "bold #7fdbca"
+style_failure = "bold #EF5350"
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+# Disable the AWS module, hiding it from the prompt completely
+[aws]
+disabled = true
+
+[nodejs]
+disabled = true
+
+
+[directory]
+style = "bold #21c7a8"
+
+[git_branch]
+style = "bold #c792ea"
+
+[git_commit]
+style = "bold #22da6e"
+
+[git_state]
+style = "bold #ffeb95"
+
+[git_status]
+style = "bold #EF5350"
+untracked_count.enable = true
+stashed_count.enabled = true
+stashed_count.style = "bold #ffeb95"
+staged_count.enabled = true
+staged_count.style = "bold #22da6e"
+deleted_count.enable = true
+
+
+
