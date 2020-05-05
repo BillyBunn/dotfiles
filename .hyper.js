@@ -9,10 +9,10 @@ module.exports = {
     updateChannel: 'canary',
 
     // default font size in pixels for all tabs
-    fontSize: 12,
+    fontSize: 14,
 
     // font family with optional fallbacks
-    fontFamily: 'Monaco, "Dank Mono", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: '"Dank Mono", Monaco, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -27,11 +27,11 @@ module.exports = {
     letterSpacing: 0,
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgba(248,28,229,0.8)',
+    // cursorColor: 'rgba(248,28,229,0.8)',
     // cursorColor: 'rgba(77, 77, 77, 1)',
 
     // terminal text color under BLOCK cursor
-    cursorAccentColor: '#000',
+    cursorAccentColor: '#EF5350',
 
     // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
     cursorShape: 'BLOCK',
@@ -40,18 +40,19 @@ module.exports = {
     cursorBlink: false,
 
     // color of the text
-    foregroundColor: '#fff',
+    // foregroundColor: '#fff',
 
     // terminal background color
     // opacity is only supported on macOS
-    backgroundColor: 'rgba(0,0,0,0.8)',
+    // backgroundColor: 'rgba(0,0,0,0.8)',
 
     // terminal selection color
-    selectionColor: 'rgba(248,28,229,0.3)',
+    // selectionColor: 'rgba(248,28,229,0.3)',
     // selectionColor: 'rgba(255, 255, 255, 0.5)',
 
     // border color (window, tabs)
     borderColor: '#333',
+    // borderColor: '#5f7e97',
 
     // custom CSS to embed in the main window
     css: '',
@@ -71,28 +72,28 @@ module.exports = {
     // custom padding (CSS format, i.e.: `top right bottom left`)
     // padding: '12px 14px',
     // padding: '12px 14px',
-    padding: '5px 5px',
+    // padding: '5px 5px',
 
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
     // an array here instead of a color map object
     colors: {
-      black: '#000000',
-      red: '#C51E14',
-      green: '#1DC121',
-      yellow: '#C7C329',
-      blue: '#0A2FC4',
-      magenta: '#C839C5',
-      cyan: '#20C5C6',
-      white: '#C7C7C7',
-      lightBlack: '#686868',
-      lightRed: '#FD6F6B',
-      lightGreen: '#67F86F',
-      lightYellow: '#FFFA72',
-      lightBlue: '#6A76FB',
-      lightMagenta: '#FD7CFC',
-      lightCyan: '#68FDFE',
-      lightWhite: '#FFFFFF',
+      // black: '#000000',
+      // red: '#C51E14',
+      // green: '#1DC121',
+      // yellow: '#C7C329',
+      // blue: '#0A2FC4',
+      // magenta: '#C839C5',
+      // cyan: '#20C5C6',
+      // white: '#C7C7C7',
+      // lightBlack: '#686868',
+      // lightRed: '#FD6F6B',
+      // lightGreen: '#67F86F',
+      // lightYellow: '#FFFA72',
+      // lightBlue: '#6A76FB',
+      // lightMagenta: '#FD7CFC',
+      // lightCyan: '#68FDFE',
+      // lightWhite: '#FFFFFF',
     },
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
@@ -145,6 +146,11 @@ module.exports = {
     webGLRenderer: true,
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+
+    opacity: {
+      focus: 1,
+      blur: 0.9
+    }
   },
 
   // a list of plugins to fetch and install from npm
@@ -153,12 +159,18 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: [],
+  plugins: [
+    // "hyper-night-owl",
+    "hyper-opacity",
+    "hypercwd"
+  ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
-  localPlugins: [],
+  localPlugins: [
+    "night-owl-custom"
+  ],
 
   keymaps: {
     // Example
