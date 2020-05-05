@@ -148,8 +148,8 @@ module.exports = {
     // for advanced config flags please refer to https://hyper.is/#cfg
 
     opacity: {
-      focus: 1,
-      blur: 0.9
+      focus: 0.95,
+      blur: 0.87
     }
   },
 
