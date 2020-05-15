@@ -16,8 +16,6 @@
     "bracket-pair-colorizer-2.forceIterationColorCycle": true,
     // When enabled, will trim trailing whitespace when saving a file.
     "files.trimTrailingWhitespace": true,
-    // ----- Code format settings -----
-    // Format code on save
     "editor.formatOnSave": true,
     // Turn off formatOnSave for JS and JSX — done instead via eslint
     "[javascript]": {
@@ -38,11 +36,38 @@
     // Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
     "prettier.disableLanguages": [
         "javascript",
-        "javascriptreact"
+        "javascriptreact",
+        "html"
     ],
     // Enable/disable default HTML formatter.
-    "html.format.enable": true,
+    "html.format.enable": false,
     // Controls whether existing line breaks before elements should be preserved. Only works before elements, not inside tags or for text.
     "html.format.preserveNewLines": true,
     "breadcrumbs.enabled": true,
+    "cSpell.userWords": [
+        "Arial",
+        "Consolas",
+        "Github's",
+        "Helvetica",
+        "Hestan",
+        "Menlo",
+        "Monospace",
+        "Segoe",
+        "Shopify",
+        "metafields",
+        "mixins",
+        "rebeccapurple",
+        "semibold"
+    ],
+    // customizations for shopify-liquid extension
+    "[html]": {
+        "editor.defaultFormatter": "sissel.shopify-liquid"
+    },
+    "[liquid]": {
+        "editor.defaultFormatter": "sissel.shopify-liquid"
+    },
+    "liquid.format": false,
+    "files.associations": {
+        "*.liquid": "html"
+    }
 }
